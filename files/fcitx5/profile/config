@@ -1,0 +1,51 @@
+[Hotkey]
+# 切换启用/禁用输入法
+TriggerKeys=
+# 反复按切换键时进行轮换
+EnumerateWithTriggerKeys=True
+# 临时在当前和第一个输入法之间切换
+AltTriggerKeys=
+# 向前切换输入法
+EnumerateForwardKeys=
+# 向后切换输入法
+EnumerateBackwardKeys=
+# 向前切换输入分组
+EnumerateGroupForwardKeys=
+# 向后切换输入法分组
+EnumerateGroupBackwardKeys=
+# 激活输入法
+ActivateKeys=
+# 取消激活输入法
+DeactivateKeys=
+# 默认上一页
+PrevPage=
+# 默认下一页
+NextPage=
+
+[Hotkey/PrevCandidate]
+0=Shift+Tab
+
+[Hotkey/NextCandidate]
+0=Tab
+
+[Behavior]
+# 默认状态为激活
+ActiveByDefault=True
+# 共享输入状态
+ShareInputState=No
+# 切换输入法时显示输入法信息
+ShowInputMethodInformation=True
+# 在焦点更改时显示输入法信息
+showInputMethodInformationWhenFocusIn=False
+# 默认页大小
+DefaultPageSize=10
+# Force Enabled Addons
+EnabledAddons=
+
+[Behavior/DisabledAddons]
+0=notifications
+1=quickphrase
+2=spell
+3=wayland
+4=waylandim
+

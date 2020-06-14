@@ -1,0 +1,108 @@
+! 设置视觉效果
+URxvt.depth: 32
+
+! 是否开启 xft 双缓冲
+URxvt.buffered: True
+
+! 设置配色方案
+! base16-xresources
+! https://github.com/chriskempson/base16-xresources
+#define base00 #1f2022
+#define base01 #282828
+#define base02 #444155
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #a3a3a3
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #f2241f
+#define base09 #ffa500
+#define base0A #b1951d
+#define base0B #67b11d
+#define base0C #2d9574
+#define base0D #4f97d7
+#define base0E #a31db1
+#define base0F #b03060
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
+! 关闭跳转滚动，开启平滑滚动
+URxvt.jumpScroll: True
+! 关闭跳过滚动，开启实时刷新
+URxvt.skipScroll: False
+
+! 失去焦点时淡化文本的百分比
+URxvt.fading: 25%
+
+! 设置字体
+URxvt.font: xft:DejaVuSansMono Nerd Font Mono:style=Book:antialias=True:autohint=True:size=13,xft:WenQuanYi Zen Hei Mono:style=Regular:antialias=True:autohint=True:size=13
+URxvt.boldFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold:antialias=True:autohint=True:size=13,xft:WenQuanYi Zen Hei Mono:style=Bold:antialias=True:autohint=True:size=13
+URxvt.italicFont: xft:DejaVuSansMono Nerd Font Mono:style=Oblique:antialias=True:autohint=True:size=13,xft:WenQuanYi Zen Hei Mono:style=Italic:antialias=True:autohint=True:size=13
+URxvt.boldItalicFont: xft:DejaVuSansMono Nerd Font Mono:style=Bold Oblique:antialias=True:autohint=True:size=13,xft:WenQuanYi Zen Hei Mono:style=Bold Italic:antialias=True:autohint=True:size=13
+! 是否显示高强度样式
+URxvt.intensityStyles: True
+
+! 是否开启滚动条
+URxvt.scrollBar: False
+! tty 接受输出时是否滚动到底部
+URxvt.scrollTtyOutput: False
+! tty 接受新行时是否滚动/回显缓冲区
+URxvt.scrollWithBuffer: True
+! 按下非特殊按键滚动到底部
+URxvt.scrollTtyKeypress: True
+! 保存的回滚行数
+URxvt.saveLines: 5201314
+! 指定在每行之间插入的行数
+URxvt.letterSpace: -1
+! 鼠标滚动页面(真:一页;假:5行)
+URxvt.mouseWheelScrollPage: False
+
+! 是否开启光标闪烁
+URxvt.cursorBlink: False
+! 是否开启透明
+URxvt.transparent: True
+! 设置阴影效果
+URxvt.shading: 35
+
+! 设置 inputMethod
+URxvt.inputMethod: Fcitx
+
+! Use keyboard shortcuts to select and copy text
+URxvt.perl-ext-common: clipboard,keyboard-select,url-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! The following line overwrites the default Meta-s binding and allows to activate keyboard-select directly in backward search mode
+URxvt.keysym.M-s: perl:keyboard-select:search
+! Copy to clipboard too
+URxvt.keyboard-select.clipboard: true
+
+! 设置鼠标点击选择范围
+URxvt.selection.pattern-0: ([[:word:]]+)

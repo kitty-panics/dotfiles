@@ -1,0 +1,14 @@
+##
+## Arch Linux CN repository mirrorlist
+## Generated on 2019-05-13
+##
+
+
+## China
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+## China
+Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
+
+
+## Official
+Server = https://cdn.repo.archlinuxcn.org/$arch

@@ -1,0 +1,6 @@
+! 设置 DPI
+!Xft.dpi: 125
+
+! 设置光标主题
+Xcursor.theme: Breeze_Snow
+Xcursor.size: 14

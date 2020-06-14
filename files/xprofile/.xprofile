@@ -1,0 +1,75 @@
+#
+# ~/.xprofile
+#
+
+# Enable Chinese locale in Graphical Interface
+
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+export LC_CTYPE=en_US.UTF-8
+
+# Set environment variables for IM modules
+
+#GTK_IM_MODULE=fcitx5
+#QT_IM_MODULE=fcitx5
+#XMODIFIERS=@im=fcitx5
+
+# Nvidia - vulkan is not working and can not initialize
+
+export VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json"
+
+# Configuration of Qt5 apps under environments other than KDE Plasma
+
+#export XDG_CURRENT_DESKTOP=GNOME
+#export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Using a GTK+ icon theme in Qt apps
+
+#export DESKTOP_SESSION=gnome
+
+# 设置 PATH 环境变量
+
+# 手动安装的软件包
+export PATH="$HOME/.config/Manual/bin:$PATH"
+export PATH="$HOME/.config/Manual/ubin:$PATH"
+# 安装在用户目录的 Python 包
+export PATH="$PATH:$HOME/.local/bin"
+# 安装在用户目录的 Node.js 包
+export PATH="$PATH:$HOME/.node_modules/bin"
+# 安装在用户目录的 Perl 包
+export PATH="$PATH:$HOME/.perl5/bin"
+# 安装在用户目录的 Ruby 包
+export PATH="$PATH:$HOME/.gem/ruby/2.7.0/bin"
+
+# 一些程序所需的变量
+
+# 设置 Node.js 包的全局安装路径
+export npm_config_prefix="$HOME/.node_modules"
+# 设置 Perl 所需的变量
+export PERL5LIB="$HOME/perl5/lib/.perl5"
+export PERL_LOCAL_LIB_ROOT="$HOME/.perl5"
+export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
+export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
+# 设置 Firefox 与 KDE 集成
+export GTK_USE_PORTAL=1
+# GTK2/3 程序在 KDE 中显示全局菜单
+#export SAL_USE_VCLPLUGIN="gtk"
+#export GTK_MODULES="appmenu-gtk-module"
+
+# 给予脚本执行权限
+
+# 手动安装的软件包
+#chmod -R +x "$HOME/.config/Manual/bin"
+chmod -R +x "$HOME/.config/Manual/ubin"
+# 安装在用户目录的 Python 包
+chmod -R +x "$HOME/.local/bin"
+# 安装在用户目录的 Node.js 包
+chmod -R +x "$HOME/.node_modules/bin"
+# 安装在用户目录的 Perl 包
+chmod -R +x "$HOME/.perl5/bin"
+# 安装在用户目录的 Ruby 包
+chmod -R +x "$HOME/.gem/ruby/2.7.0/bin"
+
+# 自启动程序
+
+#xmodmap "$HOME/.Xmodmap" &

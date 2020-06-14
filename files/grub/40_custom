@@ -1,0 +1,52 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+# Arch Linux Live CD
+menuentry "[+] Live CD" {
+    # ROOT 所在的设备 (使用设备名)
+    set root="(hd0,gpt1)"
+    # ROOT 所在的设备 (使用 UUID)
+    set imgdevpath="/dev/disk/by-uuid/6C8B-E45C"
+
+    # ISO 镜像所在的路径
+    set isofile="/ISO/archlinux.iso"
+    # 将 ISO 镜像映射为回环设备
+    loopback loop $isofile
+
+    # 载入 Linux 内核及其相关参数
+    echo "载入 Linux ..."
+    # 添加以下的参数可无声启动
+    # quiet loglevel=0 vga=current rd.udev.log_priority=3 rd.systemd.show_status=false fbcon=nodefer
+    linux (loop)/arch/boot/x86_64/vmlinuz quiet loglevel=0 vga=current rd.udev.log_priority=3 rd.systemd.show_status=false fbcon=nodefer sysrq_always_enabled=1 usb-storage.quirks=0x2109:0x0715:u,0x152d:0x0578:u,0x2537:0x1066:u,0x152d:0x1561:u img_dev=$imgdevpath img_loop=$isofile earlymodules=loop
+    # 载入 Intel 的微码、AMD 的微码、initramfs
+    echo "载入初始化内存盘..."
+    initrd (loop)/arch/boot/intel_ucode.img (loop)/arch/boot/amd_ucode.img (loop)/arch/boot/x86_64/archiso.img
+}
+
+# Windows PE
+#menuentry "[+] Windows PE" {
+#    # ROOT 所在的设备 (使用设备名)
+#    set root="(hd0,gpt1)"
+#
+#    # EFI 文件所在的路径
+#    set efifile="/EFI/BOOT/WEPEx64.efi"
+#
+#    # 载入 WePE
+#    echo "开始载入 WePE ..."
+#    chainloader $efifile
+#}
+
+# Reboot
+menuentry "[+] Reboot" {
+    echo "即将重启 ..."
+    reboot
+}
+
+# Shutdown
+menuentry "[+] Shutdown" {
+    echo "即将关机 ..."
+    halt
+}

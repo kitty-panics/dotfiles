@@ -1,0 +1,33 @@
+" 通用配置
+
+"与系统共享剪贴板
+set clipboard=unnamed
+"搜索时大小写不敏感
+set ignorecase
+"启用实时搜索
+set incsearch
+
+" 自定义按键映射：
+
+"普通模式：
+noremap <C-h> <C-W>h
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-l> <C-W>l
+noremap H ^
+noremap L $
+noremap j jzz
+noremap k kzz
+noremap G Gzz
+noremap ; :
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+"插入模式：
+inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
