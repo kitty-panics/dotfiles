@@ -102,11 +102,11 @@ fi
 # 启用颜色输出
 
 # ls
-alias ls='ls --color=auto'
+alias ls="ls --color=auto"
 # diff
-alias diff='diff --color=auto'
+alias diff="diff --color=auto"
 # grep
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
 # dmesg
 alias dmesg="dmesg --color=auto"
 # less
@@ -136,8 +136,8 @@ man() {
 # 替换程序
 
 # vi
-alias v=vim
-alias vi=vim
+alias v="vim"
+alias vi="vim"
 # vim
 #alias vimdiff="nvim -d"
 # rm
@@ -153,20 +153,20 @@ alias ll=" ls --color=auto -l -A"
 # cp
 alias fz="rsync --archive --acls --xattrs --hard-links --sparse --numeric-ids --info=progress2 --human-readable"
 # ping
-alias p=" ping -4 -c"
+alias p5=" ping -4 -c 5"
 # exit
 alias q=" exit"
 alias e=" exit"
 # sync
 alias s=" sync"
 # Decompress
-alias x.tar=" tar -xvf"
-alias x.gz=" tar -xzvf"
-alias x.tgz=" tar -xzvf"
-alias x.bz=" tar -xjvf"
-alias x.bz2=" tar -xjvf"
-alias x.xz=" tar -xvf"
-alias x.z=" tar -xZvf"
+alias x.tar="tar -xvf"
+alias x.gz="tar -xzvf"
+alias x.tgz="tar -xzvf"
+alias x.bz="tar -xjvf"
+alias x.bz2="tar -xjvf"
+alias x.xz="tar -xvf"
+alias x.z="tar -xZvf"
 # mount USB
 alias uc.m="udisksctl mount -b"
 # umount USB
@@ -200,18 +200,13 @@ alias k=" kill"
 alias kf=" kill -9"
 alias pk=" pkill"
 alias pkf=" pkill -9"
-Search_And_Kill() {
-    ps -ef | rg "$1" | sed '$d' |
-    awk '{print $2}' | while read -r LINE
-    do
-        echo -e "Kill program with PID: $LINE"
-        sudo kill "$LINE" >/dev/null 2>&1
-        sudo kill -9 "$LINE" >/dev/null 2>&1
-    done
-}
-alias psskf="Search_And_Kill"
 # 用户范围内安装 Node.js 包
 alias npmi="cnpm -g install"
+# cnpm (npm 的 taobao 镜像)
+alias cnpm="npm --registry=https://registry.npm.taobao.org/ \
+            --cache=$HOME/.npm/.cache/cnpm \
+            --disturl=https://npm.taobao.org/dist \
+            --userconfig=$HOME/.cnpmrc"
 # 用户范围内安装 Python 包
 alias pipi="pip install --user"
 # Systemd
@@ -221,7 +216,7 @@ alias sd.k="sudo systemctl stop"
 # neofetch
 alias neofetch=" neofetch --ascii_distro windows"
 # axel
-alias axel="axel --no-proxy --ipv4 --alternate -n"
+alias axel="axel --num-connections=55 --ipv4 --alternate"
 # pacfile
 alias pacfiles="find /etc -regextype posix-extended -regex \".+\\.pac(new|save)\" 2> /dev/null"
 # 粘贴文本文件到 PasteBin
@@ -246,17 +241,22 @@ Filtering_Process() {
     ps -ef | rg "$1" | sed '$d'
 }
 alias pss=" Filtering_Process"
+Search_And_Kill() {
+    ps -ef | rg "$1" | sed '$d' |
+    awk '{print $2}' | while read -r LINE
+    do
+        echo -e "Kill program with PID: $LINE"
+        sudo kill "$LINE" >/dev/null 2>&1
+        sudo kill -9 "$LINE" >/dev/null 2>&1
+    done
+}
+alias psskf="Search_And_Kill"
 # 開機時做的第一件事
 First_Blood() {
     _boot u sda
     _nvm r
 }
 alias fb=" First_Blood"
-# cnpm (npm 的 taobao 镜像)
-alias cnpm="npm --registry=https://registry.npm.taobao.org/ \
-    --cache=$HOME/.npm/.cache/cnpm \
-    --disturl=https://npm.taobao.org/dist \
-    --userconfig=$HOME/.cnpmrc"
 # 通过 MTP 与手机传输文件
 MTP_Push_Pull() {
     if [[ "$1" == "push" ]]; then
