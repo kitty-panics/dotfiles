@@ -43,9 +43,8 @@ EnabledAddons=
 
 [Behavior/DisabledAddons]
 0=emoji
-1=keyboard
-2=quickphrase
-3=spell
-4=wayland
-5=waylandim
+1=quickphrase
+2=spell
+3=wayland
+4=waylandim
 
