@@ -10,7 +10,7 @@ DefaultIM=rime
 # Name
 Name=rime
 # Layout
-Layout=
+Layout=us
 
 [GroupOrder]
 0=默认

@@ -150,13 +150,18 @@ alias vi="vim"
 alias l=" exa --all --long --sort=name --color=automatic --git"
 # ls
 alias ll=" ls --color=auto -l -A"
-# cp
-alias fz="rsync --archive --acls --xattrs --hard-links --sparse --numeric-ids --info=progress2 --human-readable"
 # ping
-alias p5=" ping -4 -c 5"
+alias p45=" ping -4 -c 5"
 # exit
 alias q=" exit"
 alias e=" exit"
+# lsblk
+alias lk=" lsblk"
+alias lkf=" lsblk -f"
+# cp
+alias fz="rsync --archive --acls --xattrs --hard-links --sparse --numeric-ids --info=progress2 --human-readable"
+# git
+alias gc1="git clone --depth=1"
 # sync
 alias s=" sync"
 # Decompress
@@ -171,9 +176,6 @@ alias x.z="tar -xZvf"
 alias uc.m="udisksctl mount -b"
 # umount USB
 alias uc.u="udisksctl unmount -b"
-# lsblk
-alias lk=" lsblk"
-alias lkf=" lsblk -f"
 # pacman
     # 更新安裝包
 alias sp.s="sudo pacman -S"
@@ -253,7 +255,7 @@ Search_And_Kill() {
 alias psskf="Search_And_Kill"
 # 開機時做的第一件事
 First_Blood() {
-    _boot u sda
+    boot u sda
     _nvm r
 }
 alias fb=" First_Blood"
@@ -273,9 +275,16 @@ Set_Android_Variables() {
     export ANDROID_SDK_ROOT="$HOME/Daily/.Temporary/Daily-Use/Android-SDK"
     export ANDROID_NDK="$ANDROID_SDK_ROOT/ndk"
     export REPO_OS_OVERRIDE="linux"
-    export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
-    export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/build-tools/29.0.3:$PATH"
     export PATH="$ANDROID_SDK_ROOT/cmake/3.10.2.4988404/bin:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/lldb/3.1/bin:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/ndk/21.3.6528147:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/skiaparser/1:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/tools:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/tools/bin:$PATH"
 }
 alias sav="Set_Android_Variables"
 # 设置网络变量
