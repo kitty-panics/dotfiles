@@ -24,7 +24,7 @@ cmus
 * cursor-themes
 dnscrypt-proxy
 docker
-fcitx5
+* fcitx5
 fish
 fontconfig
 getty

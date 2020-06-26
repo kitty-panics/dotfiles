@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 # Get parameters
 mPath="$1"

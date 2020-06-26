@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 #
 # Update ranger_devicons Plugin

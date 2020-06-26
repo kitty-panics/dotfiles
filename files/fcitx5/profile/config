@@ -37,7 +37,7 @@ ShowInputMethodInformation=True
 # 在焦点更改时显示输入法信息
 showInputMethodInformationWhenFocusIn=False
 # 默认页大小
-DefaultPageSize=5
+DefaultPageSize=10
 # Force Enabled Addons
 EnabledAddons=
 
