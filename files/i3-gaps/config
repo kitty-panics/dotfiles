@@ -400,7 +400,7 @@ mode "[Documents]" {
     bindsym c exec --no-startup-id "code"                  ,mode "default"
     bindsym l exec --no-startup-id "libreoffice"           ,mode "default"
     bindsym o exec --no-startup-id "okular"                ,mode "default"
-    bindsym k exec --no-startup-id "kchmviewer"            ,mode "default"
+    bindsym x exec --no-startup-id "xchm"                  ,mode "default"
     bindsym b exec --no-startup-id "calibre"               ,mode "default"
     bindsym v exec --no-startup-id "vym"                   ,mode "default"
     bindsym n exec --no-startup-id "vnote"                 ,mode "default"
@@ -469,7 +469,7 @@ for_window [title="^好友列表"] floating enable
 for_window [title="^选择备份文件夹"] floating enable
 #for_window [title="^Mad Max Options"] floating enable
 for_window [title="^Grand Theft Auto V 序列号"] floating enable
-for_window [title="^PPSSPP v1.9.4"] floating enable
+#for_window [title="^PPSSPP v1.9.4"] floating enable
 
 bindsym $mod+o mode "[Others]"
 mode "[Others]" {
