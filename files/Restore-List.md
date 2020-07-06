@@ -48,6 +48,7 @@ qt5ct
 redshift
 sddm
 sudo
+sysctl.d
 systemd
 tlp
 * tmux

@@ -454,7 +454,7 @@ bindsym $mod+r mode "[Relaxation]"
 mode "[Relaxation]" {
     bindsym s exec --no-startup-id "_steam"      ,mode "default"
     bindsym Shift+s exec --no-startup-id "steam" ,mode "default"
-    bindsym p exec --no-startup-id "PPSSPPQt"    ,mode "default"
+    bindsym p exec --no-startup-id "PPSSPPSDL"   ,mode "default"
     bindsym h exec --no-startup-id "hmcl"        ,mode "default"
     bindsym Escape mode "default"
     bindsym Return mode "default"
@@ -467,9 +467,8 @@ for_window [title="^找到备份文件"] floating enable
 for_window [title="^新建或者选中一个 Steam 库文件夹："] floating enable
 for_window [title="^好友列表"] floating enable
 for_window [title="^选择备份文件夹"] floating enable
-#for_window [title="^Mad Max Options"] floating enable
+for_window [title="^Mad Max Options"] floating enable
 for_window [title="^Grand Theft Auto V 序列号"] floating enable
-#for_window [title="^PPSSPP v1.9.4"] floating enable
 
 bindsym $mod+o mode "[Others]"
 mode "[Others]" {
