@@ -275,7 +275,7 @@ Set_Android_Variables() {
     export ANDROID_SDK_ROOT="$HOME/Daily/.Temporary/Daily-Use/Android-SDK"
     export ANDROID_NDK="$ANDROID_SDK_ROOT/ndk"
     export REPO_OS_OVERRIDE="linux"
-    export PATH="$ANDROID_SDK_ROOT/build-tools/29.0.3:$PATH"
+    export PATH="$ANDROID_SDK_ROOT/build-tools/30.0.1:$PATH"
     export PATH="$ANDROID_SDK_ROOT/cmake/3.10.2.4988404/bin:$PATH"
     export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
     export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
