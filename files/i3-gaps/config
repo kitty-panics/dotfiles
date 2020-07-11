@@ -136,16 +136,16 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 workspace $ws1;  exec --no-startup-id eye $ws1
+bindsym $mod+2 workspace $ws2;  exec --no-startup-id eye $ws2
+bindsym $mod+3 workspace $ws3;  exec --no-startup-id eye $ws3
+bindsym $mod+4 workspace $ws4;  exec --no-startup-id eye $ws4
+bindsym $mod+5 workspace $ws5;  exec --no-startup-id eye $ws5
+bindsym $mod+6 workspace $ws6;  exec --no-startup-id eye $ws6
+bindsym $mod+7 workspace $ws7;  exec --no-startup-id eye $ws7
+bindsym $mod+8 workspace $ws8;  exec --no-startup-id eye $ws8
+bindsym $mod+9 workspace $ws9;  exec --no-startup-id eye $ws9
+bindsym $mod+0 workspace $ws10; exec --no-startup-id eye $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
